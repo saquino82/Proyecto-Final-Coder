@@ -22,7 +22,7 @@ header {
     grid-area: encabezado;
     display: flex;
     grid-template-areas: "logo titulo menus";
-    background-color: #FCECDD;
+    background-image: linear-gradient(#FCECDD, #FFC288);
     font-family: 'Indie Flower', cursive;
     color: #FF6701;
     flex-wrap: wrap;
@@ -35,6 +35,24 @@ header {
 .logoPrincipal {
     align-items: flex-start;
     width: 30%;
+}
+
+.latido {
+    /*animacion del logo principal*/
+    animation-name: logo-late;
+    animation-timing-function:linear;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+   
+}
+@keyframes logo-late {
+    from{
+        transform: scale(0.9);
+    }
+    to{
+        transform: scale(1.05);
+    }
+    
 }
 
 /* propiedades del titulo-eslogan*/
@@ -124,7 +142,7 @@ main h4 {
 footer {
     grid-area: pie;
     display: flex;
-    background-color: #FCECDD;
+    background-image: linear-gradient(#FFC288, #FCECDD);
     font-family: 'Indie Flower', cursive;
     color: #FF6701;
     gap: 1em;
@@ -265,6 +283,11 @@ footer {
         flex-wrap: wrap;
     }
 
+    /*movimiento de los menu al pasar por encima de ellos*/
+    nav ul li:hover {
+        transform: scale(1.5);
+    }
+
     .imagenFondo {
         flex-grow: initial;
 
@@ -309,6 +332,10 @@ footer {
 
     main p {
         font-size: .9rem;
+    }
+
+    .imagenesVarias {
+        width: 30%;
     }
 
 }
