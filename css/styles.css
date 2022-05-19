@@ -1,0 +1,306 @@
+/*reset*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FFC288;
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "encabezado"
+        "cuerpo "
+        "pie";
+    padding: 10px;
+}
+
+header {
+    grid-area: encabezado;
+    display: flex;
+    grid-template-areas: "logo titulo menus";
+    background-color: #FCECDD;
+    font-family: 'Indie Flower', cursive;
+    color: #FF6701;
+    flex-wrap: wrap;
+    position: sticky;
+    z-index: 1;
+
+}
+
+/* propiedades del logo en encabezado*/
+.logoPrincipal {
+    align-items: flex-start;
+    width: 30%;
+}
+
+/* propiedades del titulo-eslogan*/
+.tituloPrincipal {
+    font-size: 1rem;
+    margin: 1em;
+    text-align: center;
+    justify-content: center;
+}
+
+/* estilos del menu de navegacion*/
+.menuPrincipal {
+    list-style-type: none;
+    justify-content: right;
+}
+
+/*aca trabajamos los estilos del menu de navegacion*/
+.menuPrincipal li {
+    display: inline-block;
+    background-color: #FFC288;
+    border-radius: 1em;
+    margin: 0.2em;
+    padding: 0.2em;
+}
+
+main {
+    grid-area: cuerpo;
+    margin: 1rem;
+    padding: 1rem;
+    font-family: 'Indie Flower', cursive;
+    color: #42031d;
+
+}
+
+.imagenFondo {
+    width: 100%;
+    justify-items: center;
+
+}
+
+.listMak ul {
+
+    justify-content: center;
+}
+
+.listMak ul li {
+    list-style-type: none;
+    display: inline-block;
+    margin: .1rem;
+    padding: 0.8rem;
+    font-size: 1.2rem;
+    font-family: 'Indie Flower', cursive;
+}
+
+main h3 {
+    font-size: 1.5rem;
+    margin: 1em;
+    padding: 0.2em;
+    font-family: 'Indie Flower', cursive;
+    text-decoration: underline;
+}
+
+main p {
+    font-size: 1rem;
+}
+
+main h4 {
+    font-size: 1.5rem;
+    margin: 1em;
+    padding: 0.2em;
+    font-family: 'Indie Flower', cursive;
+    text-decoration: underline;
+}
+
+.imagenesVarias {
+    width: 30%;
+}
+
+footer {
+    grid-area: pie;
+    display: flex;
+    background-color: #FCECDD;
+    font-family: 'Indie Flower', cursive;
+    color: #FF6701;
+    gap: 1em;
+}
+
+.logoFoot {
+    align-content: flex-start;
+    width: 30%;
+}
+
+.derechos {
+    align-content: flex-start;
+    text-size-adjust: 2em;
+    font-size: 0.5rem;
+}
+
+.contactos {
+    text-align: center;
+}
+
+.contacPie {
+    display: inline-block;
+    margin: 0.2em;
+    padding: 0.2em;
+    flex-wrap: wrap;
+    list-style-type: none;
+}
+
+.ubicacionPie {
+    align-content: stretch;
+}
+
+.redes {
+    align-content: flex-end;
+}
+
+@media screen and (max-width:768px) {
+
+    body {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: "encabezado"
+            "cuerpo"
+            "pie";
+        padding: 10px;
+    }
+
+    .menuPrincipal {
+        list-style-type: none;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .imagenFondo {
+        flex-grow: initial;
+        visibility: hidden;
+    }
+
+    .logoPrincipal {
+        width: 25%;
+    }
+
+    .tituloPrincipal {
+        font-size: .5em;
+        margin: 1em;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .contactos h3 {
+        visibility: hidden;
+    }
+
+    .contactos {
+        font-size: 0.8rem;
+    }
+
+    .direc {
+        visibility: hidden;
+    }
+
+    .tel {
+        visibility: hidden;
+    }
+
+    .ubicacionPie {
+        visibility: hidden;
+    }
+
+    .redes h4 {
+        visibility: hidden;
+    }
+
+    .redes {
+        font-size: 0.5rem;
+    }
+
+    .listMak ul li {
+        margin: .1rem;
+        padding: 0.8rem;
+        font-size: 0.8em;
+    }
+
+    main h3 {
+        font-size: 1rem;
+        margin: 1em;
+        padding: 0.2em;
+        font-family: 'Indie Flower', cursive;
+        text-decoration: underline;
+    }
+
+    main h4 {
+        font-size: 1rem;
+    }
+
+    main p {
+        font-size: 0.7rem;
+    }
+
+}
+
+@media screen and (min-width:768px) {
+
+    body {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: "encabezado"
+            "cuerpo"
+            "pie";
+        padding: 10px;
+    }
+
+    .menuPrincipal {
+        list-style-type: none;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .imagenFondo {
+        flex-grow: initial;
+
+    }
+
+    .logoPrincipal {
+        width: 25%;
+    }
+
+    .tituloPrincipal {
+        font-size: 1em;
+        margin: 1.5em;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .contactos {
+        font-size: 1rem;
+    }
+
+    .redes {
+        font-size: 1rem;
+    }
+
+    .listMak ul li {
+        margin: .1rem;
+        padding: 0.8rem;
+        font-size: 1em;
+    }
+
+    main h3 {
+        font-size: 1.2rem;
+        margin: 1em;
+        padding: 0.2em;
+        font-family: 'Indie Flower', cursive;
+        text-decoration: underline;
+    }
+
+    main h4 {
+        font-size: 1rem;
+    }
+
+    main p {
+        font-size: .9rem;
+    }
+
+}
