@@ -12,12 +12,17 @@ body {
     height: 100vh;
     grid-template-columns: 100%;
     grid-template-rows: auto auto auto;
-    grid-template-areas: "encabezado"
-        "cuerpo "
-        "pie";
+    grid-template-areas:"menu" 
+                        "encabezado"
+                        "cuerpo"
+                         "pie";
     padding: 10px;
 }
 
+.navbar-estilo{
+    grid-area: menu;
+
+}
 header {
     grid-area: encabezado;
     display: flex;
@@ -106,7 +111,11 @@ main {
     font-size: 1.2rem;
     font-family: 'Indie Flower', cursive;
 }
-
+/*acomodamos los main de los distintos html*/
+.mainTienda{
+    display: flex;
+  flex-wrap: wrap;
+}
 main h3 {
     font-size: 1.5rem;
     margin: 1em;
@@ -138,6 +147,19 @@ main h4 {
 .imagenesVarias {
     width: 30%;
 }
+.descripcionImagenes h5{
+    font-family: 'Indie Flower', cursive;
+   color:#0f0f0e ;
+    font-size: 30px;
+    background-color: wheat;
+    }
+
+    .descripcionImagenes p{
+        font-family: 'Indie Flower', cursive, #FF6701;
+        color:#0f0f0e ;
+        font-size: 20px;
+        background-color: wheat;
+        }
 
 footer {
     grid-area: pie;
@@ -177,6 +199,9 @@ footer {
 
 .redes {
     align-content: flex-end;
+}
+.desplegablesMain{
+    background-color:#FFC288;
 }
 
 @media screen and (max-width:768px) {
@@ -262,6 +287,7 @@ footer {
     main p {
         font-size: 0.7rem;
     }
+  
 
 }
 
@@ -284,8 +310,9 @@ footer {
     }
 
     /*movimiento de los menu al pasar por encima de ellos*/
-    nav ul li:hover {
+    .navbar-brand:hover {
         transform: scale(1.5);
+
     }
 
     .imagenFondo {

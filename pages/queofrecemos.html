@@ -6,6 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- link del css bootstrap-->
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+
     <!-- Link a fuente de textos -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,6 +24,55 @@
 
 <body>
     <header>
+        <!-- menu bootstrap-->
+        <div class="navbar-estilo">
+            <nav class="navbar navbar-light fixed-top">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="../Index.html">Inicio</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                        aria-labelledby="offcanvasNavbarLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">MAK3D</h5>
+                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown"
+                                        role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Nosotros
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
+                                        <li><a class="dropdown-item" href="../pages/mak3d.html">Quienes somos</a></li>
+                                        <li><a class="dropdown-item" href="../pages/mak3d.html">Nuestros objetivos</a>
+                                        </li>
+                                        <li><a class="dropdown-item" href="../pages/mak3d.html">Integrantes</a>
+                                        </li>
+                                        <li><a class="dropdown-item" href="../pages/mak3d.html">Mas</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../pages/QueOfrecemos.html">Que Ofrecemos</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../pages/Tienda.html">Tienda</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../pages/Contactanos.html">Contactanos</a>
+                                </li>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
         <!-- logo de la empresa, ubicado a la izquierda del encabezado-->
         <div class="logoPrincipal">
             <img class="latido" src="../img/mak3d.png" alt="Imagen MAK3D" width="200">
@@ -32,25 +87,7 @@
                 Diseños e Impresiones 3D
             </h2>
         </div>
-        <nav class="menuPrincipal">
-            <ul>
-                <li>
-                    <a href="../Index.html"> Inicio </a>
-                </li>
-                <li>
-                    <a href="../pages/MAK3D.html"> MAK3D </a>
-                </li>
-                <li>
-                    <a href="../pages/QueOfrecemos.html"> Que Ofrecemos </a>
-                </li>
-                <li>
-                    <a href="../pages/Tienda.html"> Tienda </a>
-                </li>
-                <li>
-                    <a href="../pages/Contactanos.html"> Contactanos</a>
-                </li>
-            </ul>
-        </nav>
+
     </header>
 
     <main>
@@ -58,48 +95,133 @@
             En MAK3D Ofrecemos
         </h2>
         <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur architecto debitis dolore minima, repellat
-            impedit ab soluta excepturi nemo quas sit eveniet, corrupti officiis vitae! Eveniet itaque reiciendis voluptatem
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur architecto debitis dolore minima,
+            repellat
+            impedit ab soluta excepturi nemo quas sit eveniet, corrupti officiis vitae! Eveniet itaque reiciendis
+            voluptatem
             dolorem?
         </p>
-        
-            <h3>
-                NUETROS DISEÑOS
-            </h3>
-    
-            <!-- la idea seria armar un detalles de los diseñor propios y cada imagen de este html sea link a ese detalle -->
-            <div>
-            <img class="imagenesVarias" src="../img/diseños/Escritorio.jpg" width="275" alt="Escritorio">
-            <img class="imagenesVarias" src="../img/diseños/MateTemp.jpg" width="200" alt="Mate Temperley">
-    
-    
+
+        <h3>
+            NUETROS DISEÑOS
+        </h3>
+
+        <!-- imagenes y detalles de los diseños propios, se le agregara un link a un detalle donde se muestran mas fotos de cada diseño-->
+
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="../img/diseños/Escritorio.jpg" class="d-block w-100" alt="Escritorio">
+                    <div class="carousel-caption d-none d-md-block ">
+                        <div class="descripcionImagenes">
+                            <h5>Escritorio</h5>
+                            <p>Este escritorio fue diseñado para poder fabricarse a medida, ya sea para trabajar o para
+                                gamers.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="../img/diseños/MateTemp.jpg" class="d-block w-100" alt="Mate Temperley">
+                    <div class="carousel-caption d-none d-md-block">
+                        <div class="descripcionImagenes">
+                            <h5>Mate personalizado</h5>
+                            <p>Mate de diseño propio, el mismo puede ser personalizado.
+                                Se puede elegir colo y escudo de equipo.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="../img/diseños/MateTemp.jpg" class="d-block w-100" alt="Mate Temperley">
+                    <div class="carousel-caption d-none d-md-block">
+                        <div class="descripcionImagenes">
+                            <h5>Third slide label</h5>
+                            <p>Some representative placeholder content for the third slide.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
-    
-        
-            <h3>
-                TE MOSTRAMOS ALGUNAS DE LAS SOLUCIONES QUE BRINDAMOS
-            </h3>
-            <!-- en esta seccion la idea es mostras los trabajos que se hicieron para solucionar roturas o faltantes de piezas -->
-            <div>
-            <img class="imagenesVarias" src="../img/soluciones/engranaje.jpg" width="200" alt="Engranaje minipimmer">
-            <img class="imagenesVarias" src="../img/soluciones/enganchelampara.jpeg" width="200" alt="Soporte lampara led">
-    
-        </div>
-    
-        
+
+        <h3>
+            TE MOSTRAMOS ALGUNAS DE LAS SOLUCIONES QUE BRINDAMOS
+        </h3>
+        <!-- en esta seccion la idea es mostras los trabajos que se hicieron para solucionar roturas o faltantes de piezas -->
+
+        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="../img/soluciones/engranaje.jpg" class="d-block w-100" alt="Engranaje minipimer">
+                </div>
+                <div class="carousel-item">
+                    <img src="../img/soluciones/enganchelampara.jpeg" class="d-block w-100" alt="Soporte lampara led">
+                </div>
+                                
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
             <h3>
                 OTROS TRABAJOS REALIZADOS
             </h3>
             <!-- en esta parte la ideas es mostras trabajos realizados en general, con 3d realizados por otros -->
-            <div>
-            <img class="imagenesVarias" src="../img/otros/imagen1.jpg" width="345" alt="soportes">
-            <img class="imagenesVarias" src="../img/otros/mu1.jpg" width="200" alt="Figura Cratos">
-            <img class="imagenesVarias" src="../img/otros/sop1.jpg" width="280" alt="Soporte celular simple">
-            <img class="imagenesVarias" src="../img/otros/sop2.jpg" width="210" alt="Soporte celular">
-            <img class="imagenesVarias" src="../img/otros/mat1.jpg" width="385" alt="Set de mate Grooth">
-        </div>
+       
+            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active" data-bs-interval="10000">
+                    <img src="../img/otros/imagen1.jpg" class="d-block w-100" alt="soportes">
+                  </div>
+                  <div class="carousel-item" data-bs-interval="2000">
+                    <img src="../img/otros/mu1.jpg" class="d-block w-100" alt="Figura Cratos">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="../img/otros/sop1.jpg" class="d-block w-100" alt="Soporte celular simple">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="../img/otros/sop2.jpg" class="d-block w-100" alt="Soporte celular">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="../img/otros/mat1.jpg" class="d-block w-100" alt="Set de mate Grooth">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+
+        
     </main>
-    
+
     <footer>
         <div>
             <img class="logoFoot" src="../img/mak3d01.png" width="100" alt="logo">
@@ -148,5 +270,10 @@
     </footer>
 
 </body>
+
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
 
 </html>
