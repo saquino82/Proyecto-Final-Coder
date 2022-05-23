@@ -12,12 +12,17 @@ body {
     height: 100vh;
     grid-template-columns: 100%;
     grid-template-rows: auto auto auto;
-    grid-template-areas: "encabezado"
-        "cuerpo "
-        "pie";
+    grid-template-areas:"menu" 
+                        "encabezado"
+                        "cuerpo"
+                         "pie";
     padding: 10px;
 }
 
+.navbar-estilo{
+    grid-area: menu;
+
+}
 header {
     grid-area: encabezado;
     display: flex;
@@ -178,6 +183,9 @@ footer {
 .redes {
     align-content: flex-end;
 }
+.desplegablesMain{
+    background-color:#FFC288;
+}
 
 @media screen and (max-width:768px) {
 
@@ -262,6 +270,7 @@ footer {
     main p {
         font-size: 0.7rem;
     }
+  
 
 }
 
@@ -284,8 +293,9 @@ footer {
     }
 
     /*movimiento de los menu al pasar por encima de ellos*/
-    nav ul li:hover {
+    .navbar-brand:hover {
         transform: scale(1.5);
+
     }
 
     .imagenFondo {
