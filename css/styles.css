@@ -6,23 +6,21 @@
     box-sizing: border-box;
 }
 
+/*estilos para el body*/
 body {
     background-color: #FFC288;
     display: grid;
     height: 100vh;
     grid-template-columns: 100%;
     grid-template-rows: auto auto auto;
-    grid-template-areas:"menu" 
-                        "encabezado"
-                        "cuerpo"
-                         "pie";
+    grid-template-areas: "menu"
+        "encabezado"
+        "cuerpo"
+        "pie";
     padding: 10px;
 }
 
-.navbar-estilo{
-    grid-area: menu;
-
-}
+/*estilos de encabezado*/
 header {
     grid-area: encabezado;
     display: flex;
@@ -33,54 +31,44 @@ header {
     flex-wrap: wrap;
     position: sticky;
     z-index: 1;
+}
+
+/*estilo para posicionar el menu*/
+
+.navbar-estilo {
+    grid-area: menu;
 
 }
 
 /* propiedades del logo en encabezado*/
-.logoPrincipal {
+.logo-principal {
     align-items: flex-start;
     width: 30%;
 }
 
+/*animacion del logo principal*/
 .latido {
-    /*animacion del logo principal*/
     animation-name: logo-late;
-    animation-timing-function:linear;
+    animation-timing-function: linear;
     animation-duration: 8s;
     animation-iteration-count: infinite;
-   
 }
+
 @keyframes logo-late {
-    from{
+    from {
         transform: scale(0.9);
     }
-    to{
+    to {
         transform: scale(1.05);
     }
-    
 }
 
 /* propiedades del titulo-eslogan*/
-.tituloPrincipal {
+.titulo-principal {
     font-size: 1rem;
     margin: 1em;
     text-align: center;
     justify-content: center;
-}
-
-/* estilos del menu de navegacion*/
-.menuPrincipal {
-    list-style-type: none;
-    justify-content: right;
-}
-
-/*aca trabajamos los estilos del menu de navegacion*/
-.menuPrincipal li {
-    display: inline-block;
-    background-color: #FFC288;
-    border-radius: 1em;
-    margin: 0.2em;
-    padding: 0.2em;
 }
 
 main {
@@ -88,22 +76,20 @@ main {
     margin: 1rem;
     padding: 1rem;
     font-family: 'Indie Flower', cursive;
-    color: #42031d;
+    }
 
-}
-
-.imagenFondo {
+.imagen-fondo {
     width: 100%;
     justify-items: center;
 
 }
 
-.listMak ul {
+.list-mak ul {
 
     justify-content: center;
 }
 
-.listMak ul li {
+.list-mak ul li {
     list-style-type: none;
     display: inline-block;
     margin: .1rem;
@@ -111,11 +97,13 @@ main {
     font-size: 1.2rem;
     font-family: 'Indie Flower', cursive;
 }
+
 /*acomodamos los main de los distintos html*/
-.mainTienda{
+.main-tienda {
     display: flex;
-  flex-wrap: wrap;
+    flex-wrap: wrap;
 }
+
 main h3 {
     font-size: 1.5rem;
     margin: 1em;
@@ -144,22 +132,23 @@ main h4 {
     text-decoration: underline;
 }
 
-.imagenesVarias {
+.imagenes-varias {
     width: 30%;
 }
-.descripcionImagenes h5{
+
+.descripcion-imagenes h5 {
     font-family: 'Indie Flower', cursive;
-   color:#0f0f0e ;
+    color: #0f0f0e;
     font-size: 30px;
     background-color: wheat;
-    }
+}
 
-    .descripcionImagenes p{
-        font-family: 'Indie Flower', cursive, #FF6701;
-        color:#0f0f0e ;
-        font-size: 20px;
-        background-color: wheat;
-        }
+.descripcion-imagenes p {
+    font-family: 'Indie Flower', cursive, #FF6701;
+    color: #0f0f0e;
+    font-size: 20px;
+    background-color: wheat;
+}
 
 footer {
     grid-area: pie;
@@ -170,7 +159,7 @@ footer {
     gap: 1em;
 }
 
-.logoFoot {
+.logo-foot {
     align-content: flex-start;
     width: 30%;
 }
@@ -185,7 +174,7 @@ footer {
     text-align: center;
 }
 
-.contacPie {
+.contac-pie {
     display: inline-block;
     margin: 0.2em;
     padding: 0.2em;
@@ -193,15 +182,16 @@ footer {
     list-style-type: none;
 }
 
-.ubicacionPie {
+.ubicacion-pie {
     align-content: stretch;
 }
 
 .redes {
     align-content: flex-end;
 }
-.desplegablesMain{
-    background-color:#FFC288;
+
+.desplegables-main {
+    background-color: #FFC288;
 }
 
 @media screen and (max-width:768px) {
@@ -216,22 +206,22 @@ footer {
         padding: 10px;
     }
 
-    .menuPrincipal {
+    .menu-principal {
         list-style-type: none;
         align-items: center;
         flex-wrap: wrap;
     }
 
-    .imagenFondo {
+    .imagen-fondo {
         flex-grow: initial;
         visibility: hidden;
     }
 
-    .logoPrincipal {
+    .logo-principal {
         width: 25%;
     }
 
-    .tituloPrincipal {
+    .titulo-trincipal {
         font-size: .5em;
         margin: 1em;
         text-align: center;
@@ -254,7 +244,7 @@ footer {
         visibility: hidden;
     }
 
-    .ubicacionPie {
+    .ubicacion-pie {
         visibility: hidden;
     }
 
@@ -266,7 +256,7 @@ footer {
         font-size: 0.5rem;
     }
 
-    .listMak ul li {
+    .list-mak ul li {
         margin: .1rem;
         padding: 0.8rem;
         font-size: 0.8em;
@@ -287,7 +277,7 @@ footer {
     main p {
         font-size: 0.7rem;
     }
-  
+
 
 }
 
@@ -303,7 +293,7 @@ footer {
         padding: 10px;
     }
 
-    .menuPrincipal {
+    .menu-principal {
         list-style-type: none;
         align-items: center;
         flex-wrap: wrap;
@@ -315,16 +305,16 @@ footer {
 
     }
 
-    .imagenFondo {
+    .imagen-fondo {
         flex-grow: initial;
 
     }
 
-    .logoPrincipal {
+    .logo-principal {
         width: 25%;
     }
 
-    .tituloPrincipal {
+    .titulo-principal {
         font-size: 1em;
         margin: 1.5em;
         text-align: center;
@@ -339,7 +329,7 @@ footer {
         font-size: 1rem;
     }
 
-    .listMak ul li {
+    .list-mak ul li {
         margin: .1rem;
         padding: 0.8rem;
         font-size: 1em;
@@ -361,7 +351,7 @@ footer {
         font-size: .9rem;
     }
 
-    .imagenesVarias {
+    .imagenes-varias {
         width: 30%;
     }
 
