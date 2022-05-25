@@ -131,6 +131,11 @@ main h4 {
     font-family: 'Indie Flower', cursive;
     text-decoration: underline;
 }
+.carouseles{
+    display: flex;
+    justify-content: center;
+    
+    }
 
 .imagenes-varias {
     width: 30%;
@@ -214,7 +219,6 @@ footer {
 
     .imagen-fondo {
         flex-grow: initial;
-        visibility: hidden;
     }
 
     .logo-principal {
