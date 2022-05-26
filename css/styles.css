@@ -134,8 +134,7 @@ main h4 {
 .carouseles{
     display: flex;
     justify-content: center;
-    
-    }
+        }
 
 .imagenes-varias {
     width: 30%;
