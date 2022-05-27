@@ -13,6 +13,7 @@ body {
     height: 100vh;
     grid-template-columns: 100%;
     grid-template-rows: auto auto auto;
+<<<<<<< HEAD
     grid-template-areas: "menu"
         "encabezado"
         "cuerpo"
@@ -21,6 +22,19 @@ body {
 }
 
 /*estilos de encabezado*/
+=======
+    grid-template-areas:"menu" 
+                        "encabezado"
+                        "cuerpo"
+                         "pie";
+    padding: 10px;
+}
+
+.navbar-estilo{
+    grid-area: menu;
+
+}
+>>>>>>> bf0ed5c16710b6e873a49a5b42ceed664469df1a
 header {
     grid-area: encabezado;
     display: flex;
@@ -193,6 +207,9 @@ footer {
 .redes {
     align-content: flex-end;
 }
+.desplegablesMain{
+    background-color:#FFC288;
+}
 
 .desplegables-main {
     background-color: #FFC288;
@@ -280,6 +297,7 @@ footer {
     main p {
         font-size: 0.7rem;
     }
+  
 
 
 }
